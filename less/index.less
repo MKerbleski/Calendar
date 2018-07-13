@@ -1,0 +1,61 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid green;
+  justify-content:center;
+  align-self: center;
+}
+
+.header {
+  width: 100%;
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightblue;
+}
+
+.calendar {
+  margin: 10px;
+  border: 1px solid red;
+
+  .week-tabs {
+    // padding: 10px;
+
+    border: 1px solid blue;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* align-items: center; */
+
+    .day {
+      height: 30px;
+      width: 200px;
+      background-color: lightgrey;
+      border: 1px solid black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &:hover {
+        text-decoration: underline;
+        background-color: white;
+        cursor: pointer;
+      }
+    }
+
+  }
+}
+
+
+
+.the-days-list {
+
+  margin: 10px;
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+
+}
