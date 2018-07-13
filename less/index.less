@@ -15,47 +15,59 @@
   background-color: lightblue;
 }
 
-.calendar {
+.calendar {//tabs
   margin: 10px;
   border: 1px solid red;
+  .todo-lists {//tabs-items
+      // width: 100%;
+      // height: 300px;
+      // display: flex;
+      // justify-content: center;
+      // padding-top: 60px;
+    }
+  .day-list { //tabs-item
+    display: none;
+    margin: 10px;
+    .title { //tabs-item-title
+      font-size: 24px;
+      font-weight: bold;
+      }
+    }
+  .day-selected { //tabs-link-selected
+    display: block;
+    }
 
-  .week-tabs {
+  .week-tabs{//tabs-links
     // padding: 10px;
 
     border: 1px solid blue;
+    padding: 10px;
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     /* align-items: center; */
+    }
 
-    .day {
-      height: 30px;
-      width: 200px;
-      background-color: lightgrey;
-      border: 1px solid black;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      &:hover {
-        text-decoration: underline;
-        background-color: white;
-        cursor: pointer;
+  .day-tab { //tabs-link
+    height: 30px;
+    width: 200px;
+    background-color: lightgrey;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+      text-decoration: underline;
+      background-color: white;
+      cursor: pointer;
       }
     }
 
-  }
-}
+    .day-tab-selected {//tabs-link-selected
+      // display: block;
+      background-color: white;
+      border: none;
+      }
 
-
-
-.the-days-list {
-
-  margin: 10px;
-  .title {
-    font-size: 24px;
-    font-weight: bold;
-  }
-
-
-}
+}//calendar
