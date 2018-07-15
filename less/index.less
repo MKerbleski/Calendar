@@ -1,14 +1,14 @@
 .container {
+  // border: 1px solid green;
   display: flex;
   flex-direction: column;
-  border: 1px solid green;
   justify-content:center;
   align-self: center;
 }
 
 .header {
+  // border: 1px solid red;
   width: 100%;
-  border: 1px solid red;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,8 +16,11 @@
 }
 
 .calendar {//tabs
+  // border: 1px solid red;
   margin: 10px;
-  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   .todo-lists {//tabs-items
       // width: 100%;
       // height: 300px;
@@ -26,28 +29,30 @@
       // padding-top: 60px;
     }
   .week-tabs{//tabs-links
-    // padding: 10px;
-
-    border: 1px solid blue;
-    padding: 10px;
+    // border: 1px solid blue;
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     /* align-items: center; */
     .day-tab { //tabs-link
-      height: 30px;
-      width: 200px;
-      background-color: lightgrey;
+      padding: 10px;
+      width: 100%;
+      border-radius: 3px;
+      background-color: #bec1c6;
       border: 1px solid black;
       display: flex;
       align-items: center;
       justify-content: center;
       &:hover {
         text-decoration: underline;
-        background-color: white;
+        background-color: #c7c9cc;
         cursor: pointer;
         }
+      }
+      .selected-tab {
+        background: linear-gradient(#bec1c6, white);
+        border-bottom: none;
       }
     }
 
