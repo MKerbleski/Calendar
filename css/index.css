@@ -17,27 +17,16 @@
   margin: 10px;
   border: 1px solid red;
 }
-.calendar .day-list {
-  display: none;
-  margin: 10px;
-}
-.calendar .day-list .title {
-  font-size: 24px;
-  font-weight: bold;
-}
-.calendar .day-selected {
-  display: block;
-}
 .calendar .week-tabs {
   border: 1px solid blue;
   padding: 10px;
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   /* align-items: center; */
 }
-.calendar .day-tab {
+.calendar .week-tabs .day-tab {
   height: 30px;
   width: 200px;
   background-color: lightgrey;
@@ -46,10 +35,24 @@
   align-items: center;
   justify-content: center;
 }
-.calendar .day-tab:hover {
+.calendar .week-tabs .day-tab:hover {
   text-decoration: underline;
   background-color: white;
   cursor: pointer;
+}
+.calendar .day-list {
+  display: block;
+  margin: 10px;
+  width: 100px;
+}
+.calendar .day-list .title {
+  font-size: 24px;
+  font-weight: bold;
+}
+.calendar .day-selected {
+  display: block;
+  margin: 10px;
+  width: 100%;
 }
 .calendar .day-tab-selected {
   background-color: white;

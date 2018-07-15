@@ -25,18 +25,6 @@
       // justify-content: center;
       // padding-top: 60px;
     }
-  .day-list { //tabs-item
-    display: none;
-    margin: 10px;
-    .title { //tabs-item-title
-      font-size: 24px;
-      font-weight: bold;
-      }
-    }
-  .day-selected { //tabs-link-selected
-    display: block;
-    }
-
   .week-tabs{//tabs-links
     // padding: 10px;
 
@@ -45,24 +33,45 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    /* align-items: center; */
-    }
-
-  .day-tab { //tabs-link
-    height: 30px;
-    width: 200px;
-    background-color: lightgrey;
-    border: 1px solid black;
-    display: flex;
-    align-items: center;
     justify-content: center;
-    &:hover {
-      text-decoration: underline;
-      background-color: white;
-      cursor: pointer;
+    /* align-items: center; */
+    .day-tab { //tabs-link
+      height: 30px;
+      width: 200px;
+      background-color: lightgrey;
+      border: 1px solid black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &:hover {
+        text-decoration: underline;
+        background-color: white;
+        cursor: pointer;
+        }
       }
     }
+
+  .day-list { //tabs-item
+    display: block;
+    // background-color: orange;
+    margin: 10px;
+    width: 100px;
+    // height: 400px;
+    .title { //tabs-item-title
+      font-size: 24px;
+      font-weight: bold;
+      }
+    }
+  .day-selected { //tabs-link-selected
+    display: block;
+    margin: 10px;
+    width: 100%;
+
+    }
+
+
+
+
 
     .day-tab-selected {//tabs-link-selected
       // display: block;

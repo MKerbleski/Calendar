@@ -2,12 +2,9 @@ class Days {
   constructor(calendarElement) {
     // console.log(this);
     this.element = calendarElement;
-    this.day = this.element.querySelectorAll('.week-tabs');
-    console.log(this.day);
+    this.day = this.element.querySelector('.week-tabs');
     this.day = Array.from(this.day).map( dayElement => {
-      return new DayLink( dayElement, this);
-
-
+      return new DayLink(dayElement, this);
     });
 
     this.activeLink = this.day[0];
@@ -30,15 +27,14 @@ class Days {
 class DayLink {
   constructor (dayElement, parent) {
     this.link = dayElement;
-    this.monkey = parent;//idk what this represents in the other tabs site
-    console.log(`this monkey = ${this.monkey}`);
+    this.day = parent;//idk what this represents in the other tabs site
 
     this.dayList = parent.getDayslist(this.link.dataset.tab);
 
-    this.dayList = new TheDaysList (this.dayList);
+    this.dayList = new DayList (this.dayList);
 
     this.link.addEventListener('click', () => {
-      this.monkey.updateActive(this);
+      this.day.updateActive(this);
       this.select();
     }); // eventListener
   };// constructor
@@ -54,9 +50,9 @@ class DayLink {
   }
 }// DayLink
 
-class TheDaysList {
-  constructor(theDaysListElement) {
-    this.e = theDaysListElement;
+class DayList {
+  constructor(DayListElement) {
+    this.e = DayListElement;
   }
 
   select() {
