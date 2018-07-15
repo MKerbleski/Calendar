@@ -78,19 +78,23 @@
 // //   this.target.style.color: blue;
 // // })
 //--------------------------Sunday Edit -----------------------------------
-const changeClass = () => {
-  console.log('changeClass invoked')
+const changeClass = (element) => {
+  element.addEventListener("mouseover", () => {
+    console.log('inside changeClass');
+    element.style.color = "blue";
+    element.classList.add('.selected-tab');
+  });
 }
 
-const dayTab = document.querySelectorAll('.selected-tab');
+
+const dayTab = document.querySelector('.day-tab');
+console.log(dayTab);
+changeClass(dayTab);
+
 // console.log(dayTab);
 // dayTab = Array.from(dayTab);
 // console.log(dayTab[0]);
 
-let selectTab = function(element){
-  this.element.classList.toggle(['selected-tab']);
-};
-
-console.log(dayTab);
-
-document.dayTab.addEventListener("mouseover", changeClass);
+// let selectTab = function(element){
+//   this.element.classList.toggle(['selected-tab']);
+// };
