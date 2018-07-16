@@ -80,7 +80,7 @@
 //--------------------------Sunday Edit -----------------------------------
 const changeClass = (e) => {
   e.forEach(function(a) {
-     a.addEventListener("mouseover", () => {
+     a.addEventListener("click", () => {
         console.log(a)
       a.classList.toggle('day-selected');
     });
@@ -90,9 +90,9 @@ const changeClass = (e) => {
   //   console.log('inside changeClass');
   //   element.style.color = "blue";
   // });
-}
 
-let dayTab = document.querySelector('.day-list');
+
+let dayTab = document.querySelectorAll('.week');
 
 console.log(dayTab);
 changeClass(dayTab);

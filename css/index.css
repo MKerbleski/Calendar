@@ -3,6 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-self: center;
+  margin: 0 auto;
 }
 .header {
   width: 100%;
@@ -12,52 +13,42 @@
   background-color: lightblue;
 }
 .calendar {
-  margin: 10px;
+  margin-bottom: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.calendar .week-tabs {
+.calendar .week {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  /* align-items: center; */
 }
-.calendar .week-tabs .day-tab {
+.calendar .week .day {
   padding: 10px;
   width: 100%;
   border-radius: 3px;
-  background-color: #bec1c6;
+  background-color: lightblue;
+  opacity: .7;
   border: 1px solid black;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.calendar .week-tabs .day-tab:hover {
+.calendar .week .day:hover {
   text-decoration: underline;
-  background-color: #c7c9cc;
+  opacity: .5;
   cursor: pointer;
 }
-.calendar .week-tabs .selected-tab {
+.calendar .week .day-selected {
   background: linear-gradient(#bec1c6, white);
   border-bottom: none;
 }
-.calendar .day-list {
-  display: block;
-  margin: 10px;
-  width: 100px;
-}
-.calendar .day-list .title {
-  font-size: 24px;
-  font-weight: bold;
-}
-.calendar .day-selected {
-  display: block;
+.calendar .agenda {
   margin: 10px;
   width: 100%;
 }
-.calendar .day-tab-selected {
-  background-color: white;
-  border: none;
+.calendar .agenda .agenda-title {
+  font-size: 24px;
+  font-weight: bold;
 }
