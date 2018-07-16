@@ -78,16 +78,22 @@
 // //   this.target.style.color: blue;
 // // })
 //--------------------------Sunday Edit -----------------------------------
-const changeClass = (element) => {
-  element.addEventListener("mouseover", () => {
-    console.log('inside changeClass');
-    element.style.color = "blue";
-    element.classList.add('.selected-tab');
-  });
+const changeClass = (e) => {
+  e.forEach(function(a) {
+     a.addEventListener("mouseover", () => {
+        console.log(a)
+      a.classList.toggle('day-selected');
+    });
+  })}
+
+  // element.addEventListener("mouseover", () => {
+  //   console.log('inside changeClass');
+  //   element.style.color = "blue";
+  // });
 }
 
+let dayTab = document.querySelector('.day-list');
 
-const dayTab = document.querySelector('.day-tab');
 console.log(dayTab);
 changeClass(dayTab);
 
